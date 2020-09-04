@@ -7,10 +7,10 @@ const cars = (state = [], action) => {
     switch(action.type) {
         case 'ADD_CAR':
             return [ ...state, action.value ]
-        // case 'REMOVE_CAR':
-        //     const newState = [ ...state ]
-        //     newState.splice(action.value, 1);
-        //     return newState;
+        case 'REMOVE_CAR':
+            const newState = [ ...state ]
+            newState.splice(action.value, 1);
+            return newState;
     }
     return state
 }
